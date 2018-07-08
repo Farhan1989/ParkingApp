@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ParkingLifeApp</string>
+
+
+
+    <array name="Areas">
+        <item>Area1</item>
+        <item>Area2</item>
+        <item>Area3</item>
+        <item>Area4</item>
+    </array>
+</resources>

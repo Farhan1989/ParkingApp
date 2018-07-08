@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asadmalik.parkinglifeapp.MainActivity">
+
+    <Button
+        android:id="@+id/btnRegistrationUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="193dp"
+        android:onClick="btnRegistration_Click"
+        android:text="Registration"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="172dp" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnRegistrationUser"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:onClick="btnLogin_Click"
+        android:text="Login"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="245dp" />
+
+</RelativeLayout>
