@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "317131551820",
+    "firebase_url": "https://parking-life.firebaseio.com",
+    "project_id": "parking-life",
+    "storage_bucket": "parking-life.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317131551820:android:c28ad939e4c9b8b3",
+        "android_client_info": {
+          "package_name": "com.example.asadmalik.parkinglifeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "317131551820-bvcmu9sh951oeada1ifidd7t4h5uj3ss.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.asadmalik.parkinglifeapp",
+            "certificate_hash": "a3e7953353dc1965d15b252ac9145e4cba6d6512"
+          }
+        },
+        {
+          "client_id": "317131551820-vq6tfm2jrn0mkkpsj97facr2uhohf40j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB75qVp67y0XWvK986g97JY1oY7iIiCBDc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "317131551820-vq6tfm2jrn0mkkpsj97facr2uhohf40j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
