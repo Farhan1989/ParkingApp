@@ -418,8 +418,8 @@ public class NearestCarParkActivity extends AppCompatActivity implements OnMapRe
                 Log.d(TAG, "onResult: name: " + place.getName());
                 mPlace.setAddress(place.getAddress().toString());
                 Log.d(TAG, "onResult: address: " + place.getAddress());
-                mPlace.setAttributions(place.getAttributions().toString());
-                Log.d(TAG, "onResult: attributions: " + place.getAttributions());
+                //mPlace.setAttributions(place.getAttributions().toString());
+                //Log.d(TAG, "onResult: attributions: " + place.getAttributions());
                 mPlace.setId(place.getId());
                 Log.d(TAG, "onResult: id:" + place.getId());
                 mPlace.setLatlng(place.getLatLng());
