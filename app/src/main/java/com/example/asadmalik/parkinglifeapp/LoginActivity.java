@@ -2,6 +2,7 @@ package com.example.asadmalik.parkinglifeapp;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,6 +20,10 @@ public class LoginActivity extends AppCompatActivity {
     private EditText txtEmailLogin;
     private EditText txtPwd;
     private FirebaseAuth firebaseAuth;
+
+    private static final String SHARED_PREF_NAME = "email";
+    private static final String KEY_NAME_EMAIL = "key_email";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +43,12 @@ public class LoginActivity extends AppCompatActivity {
 
                         if (task.isSuccessful()) {
                             Toast.makeText(LoginActivity.this, "Login successful", Toast.LENGTH_LONG).show();
+
+
+                            SharedPreferences sp = getSharedPreferences(SHARED_PREF_NAME, MODE_PRIVATE);
+                            SharedPreferences.Editor editor = sp.edit();
+                            editor.putString(KEY_NAME_EMAIL, txtEmailLogin.getText().toString());
+                            editor.apply();
 
                             Intent i = new Intent(LoginActivity.this, ProfileActivity.class);
                             startActivity(i);

@@ -3,11 +3,13 @@ package com.example.asadmalik.parkinglifeapp;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -20,11 +22,23 @@ public class ProfileActivity extends AppCompatActivity {
 
     private static final int ERROR_DIALOG_REQUEST = 9001;
 
+    private static final String SHARED_PREF_NAME = "email";
+    private static final String KEY_NAME_EMAIL = "key_email";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+
+        SharedPreferences sp = getSharedPreferences(SHARED_PREF_NAME, MODE_PRIVATE);
+        String email = sp.getString(KEY_NAME_EMAIL, null);
+
+        if (email != null) {
+            TextView textView = (TextView) findViewById(R.id.textView);
+            textView.setText("Welcome " + email);
+        }
 
 
         Button button1 = (Button) findViewById(R.id.button1);
