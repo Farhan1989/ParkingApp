@@ -35,6 +35,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 
 public class NewBookingActivity extends AppCompatActivity {
@@ -47,6 +48,7 @@ public class NewBookingActivity extends AppCompatActivity {
     private static final String SHARED_PREF_NAME = "email";
     private static final String KEY_NAME_EMAIL = "key_email";
     private static final String KEY_NAME_START_TIME = "key_start_time";
+    private static final double parkingRate = 0.50; //parking rate per min in Euros
     DatabaseReference databaseReference;
 
 
@@ -144,6 +146,7 @@ public class NewBookingActivity extends AppCompatActivity {
                                 editor.putString(KEY_NAME_START_TIME, currentTime.toString());
                                 editor.apply();
                                 String email = sp.getString(KEY_NAME_EMAIL, null);
+
                                 txtResult.setText("Welcome "+ email + "\nMeter start time is: "+ sp.getString(KEY_NAME_START_TIME, null));
                             }else if("End timer".equalsIgnoreCase(qrCodes.valueAt(0).displayValue)){
 
@@ -153,16 +156,14 @@ public class NewBookingActivity extends AppCompatActivity {
                                 try {
                                     Date startDate = format.parse(dateString);
                                     Date endDate = Calendar.getInstance().getTime();
+                                    long diffInMs = endDate.getTime() - startDate.getTime();
+                                    long diffInMinutes = TimeUnit.MILLISECONDS.toMinutes(diffInMs);
+                                    double costOfParking = diffInMinutes * parkingRate;
 
-                                    //endDate - startDate;
+                                    txtResult.setText("Total cost of parking is: €"+ costOfParking);
                                 } catch (ParseException e) {
                                     e.printStackTrace();
                                 }
-
-
-
-
-
                             }else{
                                 txtResult.setText("QR code not supported!!");
                             }
