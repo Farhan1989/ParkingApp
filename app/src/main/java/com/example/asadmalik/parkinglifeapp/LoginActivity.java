@@ -31,6 +31,16 @@ public class LoginActivity extends AppCompatActivity {
         txtEmailLogin = (EditText) findViewById(R.id.txtEmailLogin);
         txtPwd = (EditText) findViewById(R.id.txtPasswordLogin);
         firebaseAuth = FirebaseAuth.getInstance();
+
+
+
+
+    }
+    public void clickexit(View v){
+        moveTaskToBack(true);
+        android.os.Process.killProcess(android.os.Process.myPid());
+        System.exit(1);
+
     }
     public void btnUserLogin_Click(View v) {
         final ProgressDialog progressDialog = ProgressDialog.show(LoginActivity.this, "Please wait...", "Proccessing...", true);

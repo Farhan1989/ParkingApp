@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#b4ff8800"
     tools:context=".ProfileActivity">
 
 
@@ -13,9 +14,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
         android:text="TextView"
-        android:textColor="@color/colorPrimary"
-        android:textSize="18sp" />
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        android:textStyle="bold|italic" />
 
 
     <Button
@@ -23,74 +27,44 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="27dp"
-        android:width="160dp"
 
-        android:text="nearest"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="142dp"
+        android:width="160dp"
+        android:text="Nearest Car Parking"
         tools:text="Nearest Car Parking" />
 
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button"
+
         android:layout_below="@+id/button"
-        android:layout_marginTop="12dp"
-        android:width="160dp"
-
-        android:text="booking"
-        tools:text="New Booking" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="156dp"
         android:width="160dp"
-        android:text="View"
-        tools:text="View Booking" />
+        android:text="New booking"
+        tools:text="New Booking" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+
+        android:layout_below="@+id/button1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="218dp"
         android:width="160dp"
-
-        android:text="account"
+        android:text="My Account"
         tools:text="My Account" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button3"
-        android:layout_alignStart="@+id/button3"
-        android:layout_below="@+id/button3"
-        android:layout_marginTop="14dp"
-        android:width="160dp"
-
-        android:text="cancel"
-        tools:text="Cancel Booking" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button4"
-        android:layout_alignStart="@+id/button4"
-        android:layout_below="@+id/button4"
-        android:layout_marginTop="15dp"
-        android:width="160dp"
 
-        android:text="feedback"
+        android:layout_below="@+id/button3"
+        android:layout_centerHorizontal="true"
+        android:width="160dp"
+        android:text="FeedBack"
         tools:text="FeedBack" />
 
 
@@ -98,12 +72,10 @@
         android:id="@+id/button6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button5"
-        android:layout_alignStart="@+id/button5"
-        android:layout_below="@+id/button5"
-        android:layout_marginTop="19dp"
-        android:width="160dp"
 
+        android:layout_below="@+id/button5"
+        android:layout_centerHorizontal="true"
+        android:width="160dp"
         android:text="logout"
         tools:text="Logout" />
 

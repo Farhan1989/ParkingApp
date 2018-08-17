@@ -4,16 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#b4ff8800"
     tools:context="com.example.asadmalik.parkinglifeapp.RegistrationActivity">
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/btnRegistrationUser"
+        android:layout_marginEnd="93dp"
+        android:onClick="clickexit"
+        android:text="Exit" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="40dp"
+        android:text="Enter Registration Infromation "
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="16dp"
-        android:layout_alignLeft="@+id/txtEmailRegistration"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/txtEmailRegistration"
-        android:layout_marginTop="79dp"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginTop="89dp"
         android:text="Email Address"
         tools:layout_editor_absoluteX="108dp"
         tools:layout_editor_absoluteY="60dp" />
@@ -56,12 +79,12 @@
 
     <Button
         android:id="@+id/btnRegistrationUser"
-        android:onClick="btnRegistrationUser_Click"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/txtPasswordRegistration"
         android:layout_alignStart="@+id/txtPasswordRegistration"
         android:layout_below="@+id/txtPasswordRegistration"
         android:layout_marginTop="43dp"
+        android:onClick="btnRegistrationUser_Click"
         android:text="Registration" />
 </RelativeLayout>

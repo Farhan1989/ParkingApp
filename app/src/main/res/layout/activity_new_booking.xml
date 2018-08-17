@@ -4,30 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#b4ff8800"
     tools:context=".NewBookingActivity">
 
         <SurfaceView
             android:id="@+id/cameraPreview"
-            android:layout_centerInParent="true"
             android:layout_width="match_parent"
-            android:layout_height="600px" />
+            android:layout_height="600px"
+            android:layout_centerInParent="true" />
 
         <TextView
-            android:layout_centerHorizontal="true"
-            android:gravity="center_horizontal"
-            android:textSize="18sp"
-            android:layout_below="@+id/cameraPreview"
             android:id="@+id/txtResult"
-            android:layout_marginTop="20dp"
-            android:text="@string/result_text_default"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cameraPreview"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="@string/result_text_default"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/payButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/txtResult"
             android:layout_centerHorizontal="true"
             android:text="Pay by App" />
 

@@ -178,5 +178,16 @@ public class NewBookingActivity extends AppCompatActivity {
                 }
             }
         });
+
+        Button payButton = (Button) findViewById(R.id.payButton);
+
+        payButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(getApplicationContext(),PayActivity.class);
+
+                startActivity(intent1);
+            }
+        });
     }
 }
